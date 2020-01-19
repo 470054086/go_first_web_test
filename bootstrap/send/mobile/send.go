@@ -47,7 +47,7 @@ func init() {
 */
 func (s *MobileSend) Send(m *send.SendMessage) {
 	//随机获取一个chan
-	randInt := rand.Intn(4)
+	randInt := rand.Intn(s.sendChanNum)
 	s.sendChan[randInt] <- m
 }
 
